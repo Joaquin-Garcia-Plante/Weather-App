@@ -1,27 +1,27 @@
-import React from 'react';
-import './Cards.css';
+import React from "react";
+import "./Cards.css";
 
-import Card from './Card.jsx';
+import Card from "./Card.jsx";
 
-export default function Cards({cities, onClose}) {
-  if(cities){
+export default function Cards({ cities, onClose }) {
+  if (cities) {
     return (
-      <div className='cards'>
-        {cities.map(c => <Card
+      <div className="cards">
+        {cities.map((c) => (
+          <Card
             max={c.max}
             min={c.min}
             name={c.name}
             img={c.img}
-            onClose={() => onClose(c.id)} 
+            onClose={() => onClose(c.id)}
             //Funcion flecha que devuelve la invocacion a esa funcion
             id={c.id}
             key={c.id}
-          /> )}
+          />
+        ))}
       </div>
     );
   } else {
-    return(
-      <div>Sin ciudades</div>
-    )
+    return <div>Sin ciudades</div>;
   }
 }
