@@ -13,7 +13,7 @@ function App() {
   //Funcion que me va a llenar cities
   async function onSearch(city) {
     //metodo que me permite realizarle consultas a una api externa
-    let data = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`); //Realiza la consulta
+    let data = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`); //Realiza la consulta
     // .then((r) => r.json())
     //Para hacerlo asincronico, cuando termina ejecuta el cb que esta dentro de then
     //funcion flecha que responde un valor y lo traduce a otro valor
